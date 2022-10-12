@@ -21,7 +21,7 @@ public class ConsoleExercises {
          String word3 = scanner.next();
          System.out.printf("This are the 3 words %s %s %s%n", word1, word2, word3);
 
-            // This promps you to enter 3 seperate words
+            // This prompts you to enter 3 separate words 3 times
 //        System.out.println("Enter a word:");
 //        String userInput = scanner.next();
 //
@@ -46,16 +46,39 @@ public class ConsoleExercises {
 
         // Calculate the perimeter and area of Codeup's classrooms.
         // Prompt the user to enter values of length and width of a classroom at Codeup
-        System.out.println("Enter the length");
+        System.out.println("Enter the length of classroom");
         int lenght = Integer.parseInt(scanner.nextLine());
 
-        System.out.println("Enter the width");
+        System.out.println("Enter the width of classroom");
         int width = Integer.parseInt(scanner.nextLine());
 
         System.out.printf("The length is %dft and the width is %dft%n", lenght, width);
 
-        int areaOfClassroom = lenght * width;
-        System.out.printf("The area is %d", areaOfClassroom);
+        int areaAndPerimeterOfClassroom = lenght * 2 + width * 2;
+        System.out.printf("The area and perimeter is %dft", areaAndPerimeterOfClassroom);
+
+        // Bonus
+        // In your perimeter/area calculator: - Accept decimal entries. - Calculate the volume of the rooms in addition to the area and perimeter.
+        // The Scanner class can be told specifically what characters or pattern separates tokens in a piece of input with the useDelimiter method. Add the following line of code to your application after you have created a scanner (assuming the variable holding the Scanner is named scanner):
+        // scanner.useDelimiter("\n");
+
+//        System.out.println("Enter the length of classroom");
+//        double lenght = Double.parseDouble(scanner.nextLine());
+//
+//        System.out.println("Enter the width of classroom");
+//        double width = Double.parseDouble(scanner.nextLine());
+//
+//        System.out.println("Enter the height of classroom");
+//        double height = Double.parseDouble(scanner.nextLine());
+//
+//
+//        System.out.printf("The length is %dft and the width is %dft%n", lenght, width);
+//
+//        double areaAndPerimeterOfClassroom = lenght * 2 + width * 2;
+//        System.out.printf("The area and perimeter is %dft", areaAndPerimeterOfClassroom);
+//
+//        double volume = width * height * lenght;
+//        System.out.printf("The volume of your classroom is %.2f cubic feet %n", volume);
 
 
     }
