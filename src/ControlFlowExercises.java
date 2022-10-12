@@ -46,6 +46,14 @@ public class ControlFlowExercises {
 
         //For loops
         //Refactor the previous two exercises to use a for loop instead.
+        // loop that counts to 15 and starts at 5
+//        for (int l = 5; l <= 15; l++) {
+//            System.out.println(l);
+//            if (l == 15) {
+//                break;
+//            }
+//        }
+
 
         // loop that counts by 2s all the way to 100
 //        for(int c = 0; c <= 100; c+=2) {
