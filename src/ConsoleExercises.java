@@ -15,18 +15,24 @@ public class ConsoleExercises {
         System.out.format("Your number is %d%n", userNumber);
 
         // 2. Prompt a user to enter 3 words, and store each of them in a separate variable. Then, display them back in the console, each on a newline.
+         System.out.println("Enter 3 words");
+         String word1 = scanner.next();
+         String word2 = scanner.next();
+         String word3 = scanner.next();
+         System.out.printf("This are the 3 words %s %s %s%n", word1, word2, word3);
 
-        System.out.println("Enter a word:");
-        String userInput = scanner.next();
+            // This promps you to enter 3 seperate words
+//        System.out.println("Enter a word:");
+//        String userInput = scanner.next();
+//
+//        System.out.println("Enter your second word:");
+//        String userInput2 = scanner.next();
+//
+//        System.out.println("Enter your third word:");
+//        String userInput3 = scanner.next();
 
-        System.out.println("Enter your second word:");
-        String userInput2 = scanner.next();
 
-        System.out.println("Enter your third word:");
-        String userInput3 = scanner.next();
-
-
-        System.out.printf("Your Three words are %n%s %s %s%n", userInput, userInput2, userInput3);
+//        System.out.printf("Your Three words are %n%s %s %s%n", userInput, userInput2, userInput3);
 
         // 3. Prompt a user to enter a sentence, then store that sentence in a String variable using the next method. Then, display that sentence back to the user.
         // do you capture all the words?
@@ -48,8 +54,8 @@ public class ConsoleExercises {
 
         System.out.printf("The length is %dft and the width is %dft%n", lenght, width);
 
-        int areaOfClassroomm = lenght * width;
-        System.out.printf("The area is %d", areaOfClassroomm);
+        int areaOfClassroom = lenght * width;
+        System.out.printf("The area is %d", areaOfClassroom);
 
 
     }
