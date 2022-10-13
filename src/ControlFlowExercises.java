@@ -1,3 +1,4 @@
+import java.sql.SQLOutput;
 import java.util.Scanner;
 
 public class ControlFlowExercises {
@@ -37,11 +38,11 @@ public class ControlFlowExercises {
 //        } while (a >= -10);
 
         // Create a do-while loop that starts at 2, and displays the number squared on each line while the number is less than 1,000,000. Output should equal:
-        long b = 2;
-        do {
-            System.out.println("I am squaring each number " + b);
-            b = b * b;
-        } while (b < 1000000);
+//        long b = 2;
+//        do {
+//            System.out.println("I am squaring each number " + b);
+//            b = b * b;
+//        } while (b < 1000000);
 
 
         //For loops
@@ -80,6 +81,88 @@ public class ControlFlowExercises {
 //        }
 
 
+
+
+
+
+        // FIZZBUZZ
+//     2.    One of the most common interview questions for entry-level programmers is the FizzBuzz test. Developed by Imran Ghory, the test is designed to assess basic looping and conditional logic skills.
+//
+//        Write a program that prints the numbers from 1 to 100.
+//        int y = 1;
+//        while (y<=100){
+//            System.out.println("I am counting to hundredth " + y);
+//            y++;
+//        }
+
+
+//        For multiples of three: print “Fizz” instead of the number.
+//        for (int r = 0; r <= 100; r++){
+//            if (r % 3 == 0){
+//                System.out.println("FIZZ");
+//            } else {
+//                System.out.println(r);
+//            }
+//        }
+
+//        For the multiples of five: print “Buzz”.
+//        for (int g = 0; g <= 100; g++){
+//            if (g % 5 == 0){
+//                System.out.println("BUZZ");
+//            } else {
+//                System.out.println(g);
+//            }
+//        }
+
+
+//        For numbers which are multiples of both three and five: print “FizzBuzz”.
+//        for (int h = 0; h <= 100; h++){
+//            if (h % 3 == 0){
+//                System.out.println("FIZZ");
+//            } else if ( h % 5 == 0){
+//                System.out.println("BUZZ");
+//            } else {
+//                System.out.println(h);
+//            }
+//        }
+
+
+        // 3. Display a table of powers.
+        // Prompt the user to enter an integer.
+        // Display a table of squares and cubes from 1 to the value entered.
+
+        System.out.println("What number would you like to go up to ");
+        int userNumber = scanner.nextInt();
+        String userResponse = "Y".toLowerCase();
+        System.out.println("Here is your Table!");
+        System.out.printf("Number | Squared | Cubed%n ----- | ------  | -----%n");
+
+        while (userResponse.equals("y".toLowerCase())) {
+            // number
+            for (int b = 1; b <= userNumber; b++) {
+                int squared = b * b;
+                int cubic = b * b * b;
+                System.out.println(b + "      |" + squared + "        |" + cubic);
+                System.out.println("Do you want to continue? Y/N");
+
+            }  if (userResponse == userResponse){
+                userResponse = scanner.next();
+                System.out.println("What number now");
+            }
+
+
+        }
+//        // squared
+//        for ( int b = 1; b <= userNumber ; b++){
+//            System.out.println(" I am squaring " + b*b);
+//        }
+//
+//        // cubic
+//        for ( int b = 1; b <= userNumber ; b++){
+//            System.out.println(" I am cubing " + b*b*b);
+//        }
+
+        // Prompt the user to continue.
 
 
 
