@@ -133,6 +133,7 @@ public class ControlFlowExercises {
 
         System.out.println("What number would you like to go up to ");
         int userNumber = scanner.nextInt();
+        scanner.nextLine();
         String userResponse = "Y".toLowerCase();
         System.out.println("Here is your Table!");
         System.out.printf("Number | Squared | Cubed%n ----- | ------  | -----%n");
@@ -143,15 +144,18 @@ public class ControlFlowExercises {
                 int squared = b * b;
                 int cubic = b * b * b;
                 System.out.println(b + "      |" + squared + "        |" + cubic);
-                System.out.println("Do you want to continue? Y/N");
-
-            }  if (userResponse == userResponse){
-                userResponse = scanner.next();
-                System.out.println("What number now");
             }
+                System.out.println("Do you want to continue? Y/N");
+                userResponse = scanner.nextLine().toLowerCase();
 
+                System.out.println("What number now");
+                userNumber = scanner.nextInt();
+                scanner.nextLine();
 
         }
+
+
+
 //        // squared
 //        for ( int b = 1; b <= userNumber ; b++){
 //            System.out.println(" I am squaring " + b*b);
