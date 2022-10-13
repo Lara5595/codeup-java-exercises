@@ -64,7 +64,7 @@ public class ControlFlowExercises {
 //            }
 //        }
 
-       // loop that decrement by 5 from 100
+        // loop that decrement by 5 from 100
 //       for (int d = 100; d >= -10; d-=5) {
 //           System.out.println(d);
 //           if (d == -10) {
@@ -145,12 +145,12 @@ public class ControlFlowExercises {
                 int cubic = b * b * b;
                 System.out.println(b + "      |" + squared + "        |" + cubic);
             }
-                System.out.println("Do you want to continue? Y/N");
-                userResponse = scanner.nextLine().toLowerCase();
+            System.out.println("Do you want to continue? Y/N");
+            userResponse = scanner.nextLine().toLowerCase();
 
-                System.out.println("What number now");
-                userNumber = scanner.nextInt();
-                scanner.nextLine();
+            System.out.println("What number now");
+            userNumber = scanner.nextInt();
+            scanner.nextLine();
 
         }
 
