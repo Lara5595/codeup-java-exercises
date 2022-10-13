@@ -27,7 +27,7 @@ public class ControlFlowExercises {
 //            System.out.println("I am incrementing by two " + j);
 //            j+=2;
 //
-//        } while (j < 100);
+//        } while (j <= 100);
 
         // Alter your loop to count backwards by 5's from 100 to -10.
 
@@ -73,7 +73,7 @@ public class ControlFlowExercises {
 //       }
 
         // this squares the numbers
-//        for (long e = 2; e <= 1000000; e = e * e){
+//        for (long e = 2; e <= 1000000; e*=e){
 //            System.out.println(e);
 //            if (e == 1000000){
 //                break;
@@ -97,7 +97,7 @@ public class ControlFlowExercises {
 
 
 //        For multiples of three: print “Fizz” instead of the number.
-//        for (int r = 0; r <= 100; r++){
+//        for (int r = 1; r <= 100; r++){
 //            if (r % 3 == 0){
 //                System.out.println("FIZZ");
 //            } else {
@@ -106,7 +106,7 @@ public class ControlFlowExercises {
 //        }
 
 //        For the multiples of five: print “Buzz”.
-//        for (int g = 0; g <= 100; g++){
+//        for (int g = 1; g <= 100; g++){
 //            if (g % 5 == 0){
 //                System.out.println("BUZZ");
 //            } else {
@@ -116,8 +116,10 @@ public class ControlFlowExercises {
 
 
 //        For numbers which are multiples of both three and five: print “FizzBuzz”.
-//        for (int h = 0; h <= 100; h++){
-//            if (h % 3 == 0){
+//        for (int h = 1; h <= 100; h++){
+//            if ( h % 3 == 0 && h % 5 == 0) {
+//                System.out.println("FIZZBUZZ");
+//            } else if (h % 3 == 0){
 //                System.out.println("FIZZ");
 //            } else if ( h % 5 == 0){
 //                System.out.println("BUZZ");
@@ -130,47 +132,111 @@ public class ControlFlowExercises {
         // 3. Display a table of powers.
         // Prompt the user to enter an integer.
         // Display a table of squares and cubes from 1 to the value entered.
+//        Ask if the user wants to continue.
+//        Assume that the user will enter valid data.
+//        Only continue if the user agrees to.
 
-        System.out.println("What number would you like to go up to ");
-        int userNumber = scanner.nextInt();
-        scanner.nextLine();
-        String userResponse = "Y".toLowerCase();
-        System.out.println("Here is your Table!");
-        System.out.printf("Number | Squared | Cubed%n ----- | ------  | -----%n");
+//        System.out.println("What number would you like to go up to ");
+//        int userNumber = scanner.nextInt();
+//        scanner.nextLine();
+//        String userResponse = "Y".toLowerCase();
+//        System.out.println("Here is your Table!");
+//        System.out.printf("Number | Squared | Cubed%n ----- | ------  | -----%n");
+//
+//        while (userResponse.equals("y".toLowerCase())) {
+//            // number
+//            for (int b = 1; b <= userNumber; b++) {
+//                int squared = b * b;
+//                int cubic = b * b * b;
+//                System.out.println(b + "      |" + squared + "        |" + cubic);
+//            }
+//            System.out.println("Do you want to continue? Y/N");
+//            userResponse = scanner.nextLine().toLowerCase();
+//
+//            System.out.println("What number now");
+//            userNumber = scanner.nextInt();
+//            scanner.nextLine();
+//
+//        }
 
-        while (userResponse.equals("y".toLowerCase())) {
-            // number
-            for (int b = 1; b <= userNumber; b++) {
-                int squared = b * b;
-                int cubic = b * b * b;
-                System.out.println(b + "      |" + squared + "        |" + cubic);
+        // walkthrough answer
+        // Do whiles need a global variable if you want to use it like userChoice
+//        String userChoice;
+//        do {
+//            System.out.println("What number would you like to go up to? ");
+//            int userInput = scanner.nextInt();
+//            System.out.println("Here is your table!");
+//            System.out.println(""); // to create a blank line
+//            System.out.println("Number | Squared | Cubed");
+//            System.out.println("-------| --------| ------");
+//
+//            for (int i =1; i <= userInput; i++){
+//                System.out.printf("%-7d| %-8d| %d%n", i, i*i, i*i*i);
+//            }
+//            System.out.println("Do you want to continue? Y/N ");
+//            userChoice = scanner.next();
+//        } while (userChoice.equals("y".toLowerCase()));
+
+
+     // 4. Convert given number grades into letter grades.
+//        Prompt the user for a numerical grade from 0 to 100.
+//        Display the corresponding letter grade.
+//                Prompt the user to continue.
+//        Assume that the user will enter valid integers for the grades.
+//        The application should only continue if the user agrees to.
+//        Grade Ranges:
+//
+//        A : 100 - 88
+//        B : 87 - 80
+//        C : 79 - 67
+//        D : 66 - 60
+//        F : 59 - 0
+
+//        System.out.println("Enter a numerical grade form 0 to 100: ");
+//        byte grade = scanner.nextByte();
+//        char letterGrade;
+//        if (grade >=0 && grade <= 59){
+//            letterGrade = 'F';
+//        } else if (grade > 59 && grade <= 66) {
+//            letterGrade = 'D';
+//        } else if (grade > 66 && grade <= 79) {
+//            letterGrade = 'C';
+//        } else if (grade > 79 && grade <= 87) {
+//            letterGrade = 'B';
+//        } else {
+//            letterGrade = 'A';
+//        }
+//        System.out.println("The letter grade is " + letterGrade );
+
+        // Refactor to a while loop
+
+        String userChoice = "y";
+        while (userChoice.equals("y")){
+            System.out.println("Enter a numerical grade from 0 to 100:");
+            byte grade = scanner.nextByte();
+            char letterGrade;
+            if (grade <= 59){
+                letterGrade = 'F';
+            } else if (grade <= 66){
+                letterGrade = 'D';
+            } else if (grade <= 79) {
+                letterGrade = 'C';
+            } else if (grade <= 87) {
+                letterGrade = 'B';
+            } else {
+                letterGrade = 'A';
             }
-            System.out.println("Do you want to continue? Y/N");
-            userResponse = scanner.nextLine().toLowerCase();
-
-            System.out.println("What number now");
-            userNumber = scanner.nextInt();
-            scanner.nextLine();
-
+            System.out.println("The letter grade is " + letterGrade);
+            System.out.println("Would you like to enter another grade? y/n");
+            userChoice = scanner.next();
         }
 
 
 
-//        // squared
-//        for ( int b = 1; b <= userNumber ; b++){
-//            System.out.println(" I am squaring " + b*b);
-//        }
-//
-//        // cubic
-//        for ( int b = 1; b <= userNumber ; b++){
-//            System.out.println(" I am cubing " + b*b*b);
-//        }
 
-        // Prompt the user to continue.
+        // Bonus
+        // Edit your grade ranges to include pluses and minuses (ex: 99-100 = A+).
 
 
-
-
-
-    }
-}
+    } // end main
+}  // end class
