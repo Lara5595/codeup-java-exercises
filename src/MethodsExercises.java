@@ -32,7 +32,7 @@ public class MethodsExercises {
     // Bonus
     // Create your multiplication method without the * operator (Hint: a loop might be helpful).
 
-    public static int multiplicationWithoutOperator(int j, int k){
+    public static int multiplicationWithoutOperator(int j, int k) {
         int total = 0;
         for (int i = 0; i < j; i++) {
             total += k;
@@ -46,7 +46,7 @@ public class MethodsExercises {
         if ((l == 0) || (m == 0))
             return 0;
         else
-            return (l + multiplyingWithRecursion(l,m - 1));
+            return (l + multiplyingWithRecursion(l, m - 1));
     }
 
     // 2. Create a method that validates that user input is in a certain range and returns that input as an integer if it is within the given range. If not, prompt the user to input their number again until the input is within range.
@@ -82,6 +82,34 @@ public class MethodsExercises {
         }
     }
 
+    // 3. Calculate the factorial of a number.
+//    Prompt the user to enter an integer from 1 to 10.
+//    Display the factorial of the number entered by the user.
+//    Ask if the user wants to continue.
+//    Use a for loop to calculate the factorial.
+//    Assume that the user will enter an integer, but verify it’s between 1 and 10.
+//    Use the long type to store the factorial.
+//    Continue only if the user agrees to.
+//    A factorial is a number multiplied by each of the numbers before it.
+//    Factorials are denoted by the exclamation point (n!). Ex
+
+    public static int factorial(int min, int max) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.printf("Enter a integer from  %d to %d: ", min, max);
+        int userAnswer2 = Integer.parseInt(scanner.nextLine());
+
+        if (userAnswer2 < min || userAnswer2 > max) {
+            System.out.println("Do you want to continue");
+            return factorial(min,max);
+        }
+        int acc = 1;
+        for (int i = 1; i < userAnswer2 + 1; i++) {
+            acc *= i;
+        }
+        return acc;
+
+    }
+
 
 
 
@@ -95,8 +123,8 @@ public class MethodsExercises {
 //        System.out.println(" I am the remainder " + remainderFunction(10,3));
 //        System.out.println(" I am multiplying with a for loop " + multiplicationWithoutOperator(5,6));
 //        System.out.println(" I am doing recursion loop " + multiplyingWithRecursion(8,5));
-        System.out.println(getNumber(1,10));
-
+//        System.out.println(getNumber(1,10));
+          System.out.println(factorial(1,10));
 
 
     }
