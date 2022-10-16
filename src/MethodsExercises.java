@@ -102,6 +102,7 @@ public class MethodsExercises {
             System.out.println("Do you want to continue");
             return factorial(min,max);
         }
+
         int acc = 1;
         for (int i = 1; i < userAnswer2 + 1; i++) {
             acc *= i;
@@ -112,7 +113,36 @@ public class MethodsExercises {
 
 
 
+// 4.   Create an application that simulates dice rolling.
+//
+//    Ask the user to enter the number of sides for a pair of dice.
+//    Prompt the user to roll the dice.
+//"Roll" two n-sided dice, display the results of each, and then ask the user if he/she wants to roll the dice again.
+//            Use static methods to implement the method(s) that generate the random numbers.
+//    Use the .random method of the java.lang.Math class to generate random numbers
 
+//    public static double Rolldice(int dice, int r) {
+//        Scanner scanner = new Scanner(System.in);
+//        System.out.printf("Enter the number of side %d and rolls %d", dice, r);
+//        int userAnswer3 = Integer.parseInt(scanner.nextLine());
+//        if (dice == 0) {
+//            if (r == 0) {
+//                return 1.0;
+//            } else {
+//                return 0.0;
+//            } else {
+//                double sum = 0.0;
+//                for (sum +=)
+//            }
+//        }
+
+
+
+
+
+
+
+    // we are calling our functions on main
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
