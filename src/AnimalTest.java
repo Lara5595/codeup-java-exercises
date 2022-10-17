@@ -4,6 +4,8 @@ public class AnimalTest {
         dog.name = "Hunter";
         dog.sound = "Woof woof";
         dog.makeNoise();
+        dog.randomNoise();
+
 
         Animal cat = new Animal();
         cat.name = "Simba";
