@@ -21,7 +21,7 @@ public class MethodsExercises {
         return c * d;
     }
 
-    public static int divideFunction(int e, int f) {
+    public static double divideFunction(double e, double f) {   // we made it double instead of int because it will give you inaccurate answers
         return e / f;
     }
 
@@ -53,20 +53,20 @@ public class MethodsExercises {
     // 2. Create a method that validates that user input is in a certain range and returns that input as an integer if it is within the given range. If not, prompt the user to input their number again until the input is within range.
 
 
-//    public static int getNumber(int min, int max) {
-//        Scanner scanner = new Scanner(System.in);
-//
-//        System.out.printf("Enter a number between %d and %d: ", min, max);
-//        int userAnswer = Integer.parseInt(scanner.nextLine());
-//
-//        if (userAnswer <= max && userAnswer >= min) {
-//            System.out.println("You got it");
-//            return userAnswer;
-//        } else {
-//            System.out.println("Try again");
-//            return getNumber(min, max);
-//        }
-//    }
+    public static int getInteger(int min, int max) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.printf("Enter a number between %d and %d: ", min, max);
+        int userAnswer = Integer.parseInt(scanner.nextLine());
+
+        if (userAnswer <= max && userAnswer >= min) {
+            System.out.println("You got it");
+            return userAnswer;
+        } else {
+            System.out.println("Try again");
+            return getInteger(min, max);
+        }
+    }
 
     // 3. Calculate the factorial of a number.
 //    Prompt the user to enter an integer from 1 to 10.
@@ -79,23 +79,25 @@ public class MethodsExercises {
 //    A factorial is a number multiplied by each of the numbers before it.
 //    Factorials are denoted by the exclamation point (n!). Ex
 
-    public static int factorial(int min, int max) {
-        Scanner scanner = new Scanner(System.in);
-        System.out.printf("Enter a integer from  %d to %d: ", min, max);
-        int userAnswer2 = Integer.parseInt(scanner.nextLine());
+//    public static int factorial(int min, int max) {
+//        Scanner scanner = new Scanner(System.in);
+//        System.out.printf("Enter a integer from  %d to %d: ", min, max);
+//        int userAnswer2 = Integer.parseInt(scanner.nextLine());
+//
+//        if (userAnswer2 < min || userAnswer2 > max) {
+//            System.out.println("Do you want to continue");
+//            return factorial(min,max);
+//        }
+//
+//        int acc = 1;
+//        for (int i = 1; i < userAnswer2 + 1; i++) {
+//            acc *= i;
+//        }
+//        return acc;
+//
+//    }
 
-        if (userAnswer2 < min || userAnswer2 > max) {
-            System.out.println("Do you want to continue");
-            return factorial(min,max);
-        }
 
-        int acc = 1;
-        for (int i = 1; i < userAnswer2 + 1; i++) {
-            acc *= i;
-        }
-        return acc;
-
-    }
 
 
 
@@ -130,7 +132,27 @@ public class MethodsExercises {
 //    }
 
 
+    // walk through answer
 
+    public static long generateRandomNumber(int max) {
+        return Math.round(Math.random() * max);
+    }
+    public static void rollDice(){
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("How many sides do the dice have? ");
+        byte numberOfSides = scanner.nextByte();
+        System.out.printf("Your dice have %d sides.%n ", numberOfSides);
+        System.out.println("Do you want to roll the dice? y/n");
+        String userChoice = scanner.next();
+        if (userChoice.equals("y")){
+            System.out.println("You rolled the dice!");
+            System.out.printf("You rolled %d and %d%n", generateRandomNumber(numberOfSides), generateRandomNumber(numberOfSides));
+        }
+        System.out.println("Do you want to roll the dice again? ");
+        if (scanner.nextLine().equals("y")){
+            rollDice();
+        }
+    }
 
 
 
@@ -147,11 +169,12 @@ public class MethodsExercises {
 //        System.out.println(" I am the remainder " + remainderFunction(10,3));
 //        System.out.println(" I am multiplying with a for loop " + multiplicationWithoutTimesOperator(5,6));
 //        System.out.println(" I am doing recursion loop " + multiplyingWithRecursion(8,5));
-//        System.out.println(getNumber(1,10));
-          System.out.println(factorial(1,10));
+//        System.out.println(getInteger(1,10));
+//          System.out.println(factorial(1,10));
 //        System.out.println(diceRolling(6));
 
 
+            rollDice();
     }
 }
 
