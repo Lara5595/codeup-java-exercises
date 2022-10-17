@@ -21,6 +21,9 @@ public class FighterTest {
         // we are getting  club from its cLASS
         System.out.println(Club.maxDamage);
 
+        // This is a overload method
+        Fighter fighter3 = new Fighter("Mason", 1, 500);
+        fighter3.printStats();
 
     } // end of main
 } // end of FighterTest

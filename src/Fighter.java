@@ -15,7 +15,19 @@ public class Fighter {
     return D20.rolld20();   // we can call d20 and rolld20 because its a static
     }
 
+    public Fighter(){
 
+    }
+
+
+
+    // this helps for us not to be calling 1 by 1
+    public Fighter(String name, int hitPoints, int maxDamage){
+        System.out.println("A new fighter has emerged!");
+        this.name = name;
+        this.hitPoints = hitPoints;
+        this.maxDamage = maxDamage;
+    }
 
 
 }
