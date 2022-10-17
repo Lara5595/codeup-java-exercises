@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.Random;
 
 public class MethodsExercises {
     // Create four separate methods. Each will perform an arithmetic operation:
@@ -32,7 +33,7 @@ public class MethodsExercises {
     // Bonus
     // Create your multiplication method without the * operator (Hint: a loop might be helpful).
 
-    public static int multiplicationWithoutOperator(int j, int k) {
+    public static int multiplicationWithoutTimesOperator(int j, int k) {
         int total = 0;
         for (int i = 0; i < j; i++) {
             total += k;
@@ -51,21 +52,6 @@ public class MethodsExercises {
 
     // 2. Create a method that validates that user input is in a certain range and returns that input as an integer if it is within the given range. If not, prompt the user to input their number again until the input is within range.
 
-    // MASON ANSWER
-//    public static int getInteger(int min, int max) {
-//        Scanner scanner = new Scanner(System.in);
-//
-//        System.out.printf("Enter a number between %d and %d: ", min, max);
-//        int userAnswer = Integer.parseInt(scanner.nextLine());
-////        int userInput = getInteger(1, 10);
-//        if (userAnswer <= max && userAnswer >= min) { // userAnswer must be within range
-//            System.out.println("Great job Mr. Timothy! You're a big boi now :)");
-//            return userAnswer;
-//        } else {
-//            System.out.println("You're a bad boi timmmy");
-//            return getInteger(min, max);
-//        }
-//    }
 
 //    public static int getNumber(int min, int max) {
 //        Scanner scanner = new Scanner(System.in);
@@ -121,6 +107,22 @@ public class MethodsExercises {
 //            Use static methods to implement the method(s) that generate the random numbers.
 //    Use the .random method of the java.lang.Math class to generate random numbers
 
+    public static int diceRolling(int sides) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("How many sides does the die have?");
+        sides = scanner.nextInt();
+
+        System.out.println("Do you want to roll the die");
+        String userResponse = scanner.next();
+
+        double roll = 0;
+
+        if (userResponse.contains("y")) {
+            roll = Math.random() * sides + 1;
+            return (int) roll;
+        }
+        return (int) roll;
+    }
 
 
 
@@ -138,10 +140,11 @@ public class MethodsExercises {
 //        System.out.println(" I am multiplying " + multiplyFunction(5,5));
 //        System.out.println(" I am dividing " + divideFunction(20,5));
 //        System.out.println(" I am the remainder " + remainderFunction(10,3));
-//        System.out.println(" I am multiplying with a for loop " + multiplicationWithoutOperator(5,6));
+//        System.out.println(" I am multiplying with a for loop " + multiplicationWithoutTimesOperator(5,6));
 //        System.out.println(" I am doing recursion loop " + multiplyingWithRecursion(8,5));
 //        System.out.println(getNumber(1,10));
 //          System.out.println(factorial(1,10));
+        System.out.println(diceRolling(6));
 
 
     }
