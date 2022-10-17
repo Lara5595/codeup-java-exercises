@@ -8,14 +8,15 @@ public class FighterTest {
         fighter1.printStats();
         fighter1.battleRoar();
 
+        int fighter1attackRoll = fighter1.attackRoll();
+        System.out.printf("%s attacks and rolls a %d%n", fighter1.name, fighter1attackRoll);
 
-        Fighter fighter2 = new Fighter();
-        fighter2.name = "Sozalix";
-        fighter2.hitPoints = 20;
-        fighter2.maxDamage = 19;
-        fighter2.printStats();
-        fighter2.battleRoar();
-
+//        Fighter fighter2 = new Fighter();
+//        fighter2.name = "Sozalix";
+//        fighter2.hitPoints = 20;
+//        fighter2.maxDamage = 19;
+//        fighter2.printStats();
+//        fighter2.battleRoar();
 
 
     } // end of main

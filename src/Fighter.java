@@ -10,4 +10,11 @@ public class Fighter {
     public void battleRoar() {
         System.out.printf("I am %s and I will destroy you%n", name);
     }
+
+    public int attackRoll(){
+    return D20.rolld20();   // we can call d20 and rolld20 because its a static
+    }
+
 }
+
+
