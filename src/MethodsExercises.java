@@ -79,23 +79,23 @@ public class MethodsExercises {
 //    A factorial is a number multiplied by each of the numbers before it.
 //    Factorials are denoted by the exclamation point (n!). Ex
 
-//    public static int factorial(int min, int max) {
-//        Scanner scanner = new Scanner(System.in);
-//        System.out.printf("Enter a integer from  %d to %d: ", min, max);
-//        int userAnswer2 = Integer.parseInt(scanner.nextLine());
-//
-//        if (userAnswer2 < min || userAnswer2 > max) {
-//            System.out.println("Do you want to continue");
-//            return factorial(min,max);
-//        }
-//
-//        int acc = 1;
-//        for (int i = 1; i < userAnswer2 + 1; i++) {
-//            acc *= i;
-//        }
-//        return acc;
-//
-//    }
+    public static int factorial(int min, int max) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.printf("Enter a integer from  %d to %d: ", min, max);
+        int userAnswer2 = Integer.parseInt(scanner.nextLine());
+
+        if (userAnswer2 < min || userAnswer2 > max) {
+            System.out.println("Do you want to continue");
+            return factorial(min,max);
+        }
+
+        int acc = 1;
+        for (int i = 1; i < userAnswer2 + 1; i++) {
+            acc *= i;
+        }
+        return acc;
+
+    }
 
 
 
@@ -107,22 +107,27 @@ public class MethodsExercises {
 //            Use static methods to implement the method(s) that generate the random numbers.
 //    Use the .random method of the java.lang.Math class to generate random numbers
 
-    public static int diceRolling(int sides) {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("How many sides does the die have?");
-        sides = scanner.nextInt();
-
-        System.out.println("Do you want to roll the die");
-        String userResponse = scanner.next();
-
-        double roll = 0;
-
-        if (userResponse.contains("y")) {
-            roll = Math.random() * sides + 1;
-            return (int) roll;
-        }
-        return (int) roll;
-    }
+//    public static int diceRolling(int sides) {       // our parameter is sides
+//        Scanner scanner = new Scanner(System.in);
+//        System.out.println("How many sides does the die have?"); // first step is ask the user how many sides it has
+//        sides = scanner.nextInt();     // This makes it so it appears on the console
+//
+//        System.out.println("Do you want to roll the die");  // Second step is ask the user to roll the dice
+//        String userResponse = scanner.next();     // call it to appear on console.
+//
+//        double roll = 0;
+//
+//        if (userResponse.contains("y")) {
+//            roll = Math.random() * sides + 1;
+//            return (int) roll;
+//        }   else if (userResponse.contains("Yes")) {
+//            System.out.println("Do you want to continue");
+//            return diceRolling(sides);
+//        }
+//        return (int) roll;
+//
+//
+//    }
 
 
 
@@ -143,9 +148,13 @@ public class MethodsExercises {
 //        System.out.println(" I am multiplying with a for loop " + multiplicationWithoutTimesOperator(5,6));
 //        System.out.println(" I am doing recursion loop " + multiplyingWithRecursion(8,5));
 //        System.out.println(getNumber(1,10));
-//          System.out.println(factorial(1,10));
-        System.out.println(diceRolling(6));
+          System.out.println(factorial(1,10));
+//        System.out.println(diceRolling(6));
 
 
     }
 }
+
+
+
+
