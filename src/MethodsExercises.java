@@ -67,20 +67,20 @@ public class MethodsExercises {
 //        }
 //    }
 
-    public static int getNumber(int min, int max) {
-        Scanner scanner = new Scanner(System.in);
-
-        System.out.printf("Enter a number between %d and %d: ", min, max);
-        int userAnswer = Integer.parseInt(scanner.nextLine());
-
-        if (userAnswer <= max && userAnswer >= min) {
-            System.out.println("You got it");
-            return userAnswer;
-        } else {
-            System.out.println("Try again");
-            return getNumber(min, max);
-        }
-    }
+//    public static int getNumber(int min, int max) {
+//        Scanner scanner = new Scanner(System.in);
+//
+//        System.out.printf("Enter a number between %d and %d: ", min, max);
+//        int userAnswer = Integer.parseInt(scanner.nextLine());
+//
+//        if (userAnswer <= max && userAnswer >= min) {
+//            System.out.println("You got it");
+//            return userAnswer;
+//        } else {
+//            System.out.println("Try again");
+//            return getNumber(min, max);
+//        }
+//    }
 
     // 3. Calculate the factorial of a number.
 //    Prompt the user to enter an integer from 1 to 10.
@@ -93,23 +93,23 @@ public class MethodsExercises {
 //    A factorial is a number multiplied by each of the numbers before it.
 //    Factorials are denoted by the exclamation point (n!). Ex
 
-    public static int factorial(int min, int max) {
-        Scanner scanner = new Scanner(System.in);
-        System.out.printf("Enter a integer from  %d to %d: ", min, max);
-        int userAnswer2 = Integer.parseInt(scanner.nextLine());
-
-        if (userAnswer2 < min || userAnswer2 > max) {
-            System.out.println("Do you want to continue");
-            return factorial(min,max);
-        }
-
-        int acc = 1;
-        for (int i = 1; i < userAnswer2 + 1; i++) {
-            acc *= i;
-        }
-        return acc;
-
-    }
+//    public static int factorial(int min, int max) {
+//        Scanner scanner = new Scanner(System.in);
+//        System.out.printf("Enter a integer from  %d to %d: ", min, max);
+//        int userAnswer2 = Integer.parseInt(scanner.nextLine());
+//
+//        if (userAnswer2 < min || userAnswer2 > max) {
+//            System.out.println("Do you want to continue");
+//            return factorial(min,max);
+//        }
+//
+//        int acc = 1;
+//        for (int i = 1; i < userAnswer2 + 1; i++) {
+//            acc *= i;
+//        }
+//        return acc;
+//
+//    }
 
 
 
@@ -121,20 +121,7 @@ public class MethodsExercises {
 //            Use static methods to implement the method(s) that generate the random numbers.
 //    Use the .random method of the java.lang.Math class to generate random numbers
 
-//    public static double Rolldice(int dice, int r) {
-//        Scanner scanner = new Scanner(System.in);
-//        System.out.printf("Enter the number of side %d and rolls %d", dice, r);
-//        int userAnswer3 = Integer.parseInt(scanner.nextLine());
-//        if (dice == 0) {
-//            if (r == 0) {
-//                return 1.0;
-//            } else {
-//                return 0.0;
-//            } else {
-//                double sum = 0.0;
-//                for (sum +=)
-//            }
-//        }
+
 
 
 
@@ -154,7 +141,7 @@ public class MethodsExercises {
 //        System.out.println(" I am multiplying with a for loop " + multiplicationWithoutOperator(5,6));
 //        System.out.println(" I am doing recursion loop " + multiplyingWithRecursion(8,5));
 //        System.out.println(getNumber(1,10));
-          System.out.println(factorial(1,10));
+//          System.out.println(factorial(1,10));
 
 
     }
