@@ -1,13 +1,14 @@
+// Class
 public class Employee {
-
+// Instance Variable
     public String name;
-
+// Static Variable
     public static  String company = "Veridian Dynamics";
-
+// Non-static method to display employee info
     public String displayEmployeeInfo(){
         return name + " works at " + company;
     }
-
+// Constructor to announce new employee
     public Employee(){ // every time a employee is created it will sout
         System.out.println("We have a new employee!");
     }
