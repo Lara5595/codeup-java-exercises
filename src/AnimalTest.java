@@ -5,6 +5,8 @@ public class AnimalTest {
 //        dog.sound = "Woof woof";
         dog.setName("Hunter new version");
         dog.setSound("I am upgraded");
+
+
         dog.makeNoise();
         dog.randomNoise();
 

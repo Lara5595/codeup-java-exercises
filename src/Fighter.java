@@ -15,6 +15,7 @@ public class Fighter {
     public  int getHitPoints() {
         return hitPoints;
     }
+
     public int maxDamage;
 
     // Instance methods
