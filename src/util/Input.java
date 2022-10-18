@@ -59,18 +59,24 @@ public class Input {
 //   }
 
 
-   public double getDouble(double min, double max) {
-      System.out.printf("Enter a decimal number between %f and %s " , min, max); // I used f and s to compare it
-      double userInput3 = scanner.nextDouble();
+//   public double getDouble(double min, double max) {
+//      System.out.printf("Enter a decimal number between %f and %s " , min, max); // I used f and s to compare it
+//      double userInput3 = scanner.nextDouble();
+//
+//      if (userInput3 >= min && userInput3 <= max) {
+//         System.out.println("You got the Double, meaning you got it");
+//         return userInput3;
+//      } else {
+//         System.out.println("Please Try again");
+//         return getDouble(min,max);
+//      }
+//   }
 
-      if (userInput3 >= min && userInput3 <= max) {
-         System.out.println("You got the Double, meaning you got it");
-         return userInput3;
-      } else {
-         System.out.println("Please Try again");
-         return getDouble(min,max);
-      }
+      public double getDouble() {
+      System.out.println("Enter your Decimal number: ");
+      return scanner.nextDouble();
    }
+
 
    // Constructor
    public Input(){
