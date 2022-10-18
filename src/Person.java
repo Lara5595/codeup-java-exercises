@@ -2,12 +2,12 @@ public class Person {
 
     private String name;
 
-// Setter
+// Getter
     public String getName(){
 //TODO: return the person's name
         return name;
     }
-// Getter
+// Setter
     public void setName(String name){
 //TODO: change the name field to the passed value
         this.name = name;
