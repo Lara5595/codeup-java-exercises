@@ -1,16 +1,18 @@
 public class AnimalTest {
     public static void main(String[] args) {
         Animal dog = new Animal();
-        dog.name = "Hunter";
-        dog.sound = "Woof woof";
+//        dog.name = "Hunter";
+//        dog.sound = "Woof woof";
+        dog.setName("Hunter new version");
+        dog.setSound("I am upgraded");
         dog.makeNoise();
         dog.randomNoise();
 
 
         Animal cat = new Animal();
-        cat.name = "Simba";
-        cat.sound = "Meow";
-        cat.makeNoise();
+//        cat.name = "Simba";
+//        cat.sound = "Meow";
+//        cat.makeNoise();
     }
 }
 

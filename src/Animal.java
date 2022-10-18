@@ -1,7 +1,27 @@
 public class Animal {
-    public String name;
 
-    public String sound;
+    // I set the strings to private so i can create a getter and setter
+    private String name;
+
+    private String sound;
+
+    //setter
+    public String getName() {
+        return name;
+    }
+    // getter
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    //setter
+    public String getSound() {
+        return sound;
+    }
+    //getter
+    public void setSound(String sound) {
+        this.sound = sound;
+    }
 
     public void makeNoise(){
         System.out.printf("%s goes %s%n",name,sound);
