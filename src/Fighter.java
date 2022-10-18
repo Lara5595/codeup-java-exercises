@@ -1,7 +1,20 @@
 public class Fighter {
     // Instance Variables
     public String name;
-    public int hitPoints;
+
+    //set to private
+    private int hitPoints;
+
+    // setter -- set to public
+    public void setHitPoints(int hitPoints){
+        // if (hitPoints > 0) {..set hitpoints}
+        this.hitPoints = hitPoints;
+    }
+
+    // getter -- set to public
+    public  int getHitPoints() {
+        return hitPoints;
+    }
     public int maxDamage;
 
     // Instance methods
@@ -16,7 +29,7 @@ public class Fighter {
     // This is a instance method for any given fighter
     // All class roles are capitalize like D20
     public int attackRoll(){
-    return D20.rolld20();   // we can call d20 and rolld20 because it's a static
+        return D20.rolld20();   // we can call d20 and rolld20 because it's a static
     }
 
     // No-arg constructor
@@ -36,5 +49,4 @@ public class Fighter {
 
 
 }
-
 

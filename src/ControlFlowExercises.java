@@ -1,4 +1,3 @@
-import java.sql.SQLOutput;
 import java.util.Scanner;
 
 public class ControlFlowExercises {
@@ -239,4 +238,9 @@ public class ControlFlowExercises {
 
 
     } // end main
+
+    public static class Club {
+        public static  int maxDamage = 4;
+
+    }
 }  // end class

@@ -1,4 +1,5 @@
 // we are importing Scanner form the java library
+
 import java.util.Scanner;
 
 
@@ -56,5 +57,35 @@ public class ConsoleIOLecture {
 
 
 
+    }
+
+    public static class AnimalTest {
+        public static void main(String[] args) {
+            Animal dog = new Animal();
+            dog.name = "Hunter";
+            dog.sound = "Woof woof";
+            dog.makeNoise();
+            dog.randomNoise();
+
+
+            Animal cat = new Animal();
+            cat.name = "Simba";
+            cat.sound = "Meow";
+            cat.makeNoise();
+        }
+    }
+
+    public static class Animal {
+        public String name;
+
+        public String sound;
+
+        public void makeNoise(){
+            System.out.printf("%s goes %s%n",name,sound);
+        }
+
+        public void randomNoise(){
+            System.out.printf("%s goes %s%n", name, Quote.RandomQuote());
+        }
     }
 }
