@@ -78,6 +78,12 @@ public class Input {
    }
 
 
+   // Bonus
+   //
+   //Allow all of your methods for getting input to accept an optional String parameter named prompt. If passed, the method should show the given prompt to the user before parsing the input.
+
+
+
    // Constructor
    public Input(){
       scanner = new Scanner(System.in);

@@ -1,9 +1,9 @@
 public class PersonTest {
     public static void main(String[] args) {
-        // Setter and getter solution
-//        Person person = new Person();
-//        person.setName("David");
-//        person.sayHello();
+//         Setter and getter solution
+        Person person = new Person();
+        person.setName("David");
+        person.sayHello();
 
         // Output is True and false
 //        Person person1 = new Person("John");

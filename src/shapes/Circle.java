@@ -14,6 +14,12 @@ public class Circle {
     }
 
     // Setter
+//    public void setRadius() {
+//        System.out.println("Enter a radius: ");
+//        double userDouble = scanner.nextDouble();
+//        Circle.radius = userDouble;
+////        return userDouble;
+//    }
     public void setRadius() {
         System.out.println("Enter a radius: ");
         double userDouble = scanner.nextDouble();
