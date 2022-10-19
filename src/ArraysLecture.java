@@ -4,7 +4,7 @@ public class ArraysLecture {
     public static void main(String[] args) {
 
         int [] numbers;
-        numbers = new int[5]; // we create the array with how many it will have
+           numbers = new int[5]; // we create the array with how many it will have
         numbers[0] = 78;
         numbers[1] = 253;
         numbers[2] = -23;       // we have to input the numbers one by one
