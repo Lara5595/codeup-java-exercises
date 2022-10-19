@@ -20,7 +20,7 @@ public class ServerNameGenerator {
         }
 
         public static String getRandomElement(String[] array){
-            Random generator = new Random();
+            Random generator = new Random(); // This imports random util
             int randomIndex = generator.nextInt(array.length);
             return array[randomIndex];
         }
@@ -28,10 +28,10 @@ public class ServerNameGenerator {
 
         // constructor
         public ServerNameGenerator(){
-            String adjective = getRandomElement(adjectives);  // get a random value from adjective array
-            String noun = getRandomElement(nouns);
-            String combined = adjective + "-" + noun;
-            this.name = combined;
+            String adjective = getRandomElement(adjectives);  // This is using the method getRandomElement to get a adj from the array
+            String noun = getRandomElement(nouns);            // This does the same thing for nouns^
+            String combined = adjective + "-" + noun;         // This combines both adj and noun
+            this.name = combined;                             // We called it to get the name
         }
 
 
