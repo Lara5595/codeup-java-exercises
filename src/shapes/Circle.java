@@ -50,7 +50,6 @@ public class Circle {
 
 
 
-
     // Constructor
     public Circle(){
 //        scanner = new Scanner(System.in);
