@@ -25,6 +25,16 @@ public class Person {
         return copyPersonArray;
     }
 
+    // or
+//    public static Person[] addPerson(Person[] oldArray, Person newPerson){
+//        Person [] newPeopleArray;
+//        newPeopleArray = new Person[oldArray.length + 1];
+//        for (int i = 0; i <= oldArray.length - 1; i++){
+//           newPeopleArray[i] = oldArray[i];
+//        }
+//    }
+
+
     public void sayHello(){
 //TODO: print a message to the console using the person's name
         System.out.println("Hello " + getName());

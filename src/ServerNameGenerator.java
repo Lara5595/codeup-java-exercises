@@ -1,20 +1,45 @@
 import java.util.Arrays;
+import java.util.Random;
 
 public class ServerNameGenerator {
-    public static void main(String[] args) {
 
-        String [] adjectives = {"goofy", "purring", "gratis", "nutty", "glossy", "youthful", "heady", "heady", "impossible", "pumped"};
-        System.out.println(Arrays.toString(adjectives));
+    String [] adjectives = {"goofy", "purring", "gratis", "nutty", "glossy", "youthful", "heady", "heady", "impossible", "pumped"};
 
-        String [] nouns = {"arm", "month", "roof", "thumb", "branch", "potato", "adjustment", "kitty", "soap", "whip" };
-        System.out.println(Arrays.toString(nouns));
+    String [] nouns = {"arm", "month", "roof", "thumb", "branch", "potato", "adjustment", "kitty", "soap", "whip" };
+
+        private String name;
+
+        // Getter
+        public String getName(){
+            return name;
+        }
+
+        // Methods
+        public String toString(){
+            return name;
+        }
+
+        public static String getRandomElement(String[] array){
+            Random generator = new Random();
+            int randomIndex = generator.nextInt(array.length);
+            return array[randomIndex];
+        }
+
+
+        // constructor
+        public ServerNameGenerator(){
+            String adjective = getRandomElement(adjectives);  // get a random value from adjective array
+            String noun = getRandomElement(nouns);
+            String combined = adjective + "-" + noun;
+            this.name = combined;
+        }
 
 
 
 
 
 
-    } // end of main
+
 } // end of serverNameGenerator
 
 
