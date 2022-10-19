@@ -18,6 +18,11 @@ public class Person {
         System.out.println("Hello " + getName());
     }
 
+    //When creating a overload constructor is best to aslo create a constructor with no args
+    public Person(){
+
+    }
+
     //Constructor
     public Person(String name){
         this.name = name;
