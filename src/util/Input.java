@@ -21,7 +21,7 @@ public class Input {
    // Methods\
 
    // Returns your string
-   public String getString() {
+   public String getString(String s) {
       System.out.println("Enter your input: ");
       return scanner.nextLine();
    }
