@@ -11,7 +11,7 @@ public class VehiclesTest {
         JohnDeere.setName("John Deere");
         System.out.print(JohnDeere.getName() + " goes ");
         JohnDeere.makeNoise();
-
+        JohnDeere.breakDown();
 
     } // end of main
 } // end of vehicles test
