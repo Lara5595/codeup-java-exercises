@@ -20,8 +20,14 @@ public class Vehicles {
     }
 
 
+    public void alarm() {
+        System.out.println("whowhowhowhwohwohwoh");
+    }
+
     // Constructors
-    public Vehicles() {
+    public Vehicles(){}
+
+    public Vehicles(String name) {
         this.name = name;
     }
 

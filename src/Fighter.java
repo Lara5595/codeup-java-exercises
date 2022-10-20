@@ -1,3 +1,5 @@
+import rpg.D20;
+
 public class Fighter {
     // Instance Variables
     public String name;
@@ -28,7 +30,7 @@ public class Fighter {
     }
 
     // This is a instance method for any given fighter
-    // All class roles are capitalize like D20
+    // All class roles are capitalize like rpg.D20
     public int attackRoll(){
         return D20.rolld20();   // we can call d20 and rolld20 because it's a static
     }

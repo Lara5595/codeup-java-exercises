@@ -1,3 +1,5 @@
+import rpg.Club;
+
 public class FighterTest {
     public static void main(String[] args) {
         Fighter fighter1 = new Fighter();

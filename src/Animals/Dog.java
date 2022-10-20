@@ -1,3 +1,5 @@
+package Animals;
+
 public class Dog {
 
     public static String bark() {
