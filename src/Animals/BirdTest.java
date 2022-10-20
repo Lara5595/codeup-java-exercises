@@ -1,5 +1,5 @@
 package Animals;
-
+// inheritance and polymorphism
 public class BirdTest {
     public static void main(String[] args) {
         Bird crow = new Bird();
@@ -24,6 +24,7 @@ public class BirdTest {
         parrot2.setName("Parrot cant echo");
         System.out.println(parrot2.getName());
 
+        // Example of polymorphism: a polymorphic array
         Bird[] birds = new Bird[3];
         birds[0] = new Finch();
         birds[0].setName("Lesser Goldfinch");
@@ -35,9 +36,12 @@ public class BirdTest {
         for (Bird bird : birds){
             bird.makeNoise();
         }
+        // How to get the parrot's echo back
         Parrot backToParrot = (Parrot) birds[1];   // This gives the new parrot echo now
         System.out.print(backToParrot.getName() + " says ");
         backToParrot.echo("I can echo now");
+
+        Bird.birdSounds(birds); // We created a method that returns the loop of sounds
 
     } // end of main
 }// BirdTest
