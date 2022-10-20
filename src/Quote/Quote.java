@@ -1,3 +1,5 @@
+package Quote;
+
 public class Quote {
     public static String RandomQuote() {
         int randomNumber = (int) (Math.random()*4) +1;

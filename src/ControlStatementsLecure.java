@@ -172,6 +172,6 @@ public class ControlStatementsLecure {
                 fighter3.printStats();
 
             } // end of main
-        } // end of ControlStatementsLecure.Fighter.FighterTest
+        } // end of ControlStatementsLecure.rpg.Fighter.rpg.FighterTest
     }
 }

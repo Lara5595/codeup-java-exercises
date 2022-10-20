@@ -1,5 +1,7 @@
 // we are importing Scanner form the java library
 
+import Quote.Quote;
+
 import java.util.Scanner;
 
 

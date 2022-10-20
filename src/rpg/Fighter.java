@@ -1,3 +1,5 @@
+package rpg;
+
 import rpg.D20;
 
 public class Fighter {

@@ -1,4 +1,7 @@
+package rpg;
+
 import rpg.Club;
+import rpg.Fighter;
 
 public class FighterTest {
     public static void main(String[] args) {
@@ -30,6 +33,6 @@ public class FighterTest {
         fighter3.printStats();
 
     } // end of main
-} // end of FighterTest
+} // end of rpg.FighterTest
 
 
