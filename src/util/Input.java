@@ -21,10 +21,17 @@ public class Input {
    // Methods\
 
    // Returns your string
-   public String getString(String s) {
+   public String getString() {
       System.out.println("Enter your input: ");
       return scanner.nextLine();
    }
+
+   public String getString(String prompt){
+      System.out.println(prompt);
+      return scanner.nextLine();
+   }
+
+
 
    // Returns True or false
    public boolean yesNo() {

@@ -35,6 +35,18 @@ public class Movie {
         }
     }
 
+    public  static Movie[] addMovie(Movie newMovie, Movie[] movies){ // This lets you add a movie to the array. We have a diffrent version on people class that uses Arrays.copyof this is just a different version
+        Movie[] newMovieArray;
+        newMovieArray = new Movie[movies.length + 1];
+        for (int i =0; i< movies.length; i++){
+            newMovieArray[i] = movies[i];
+        }
+        newMovieArray[newMovieArray.length - 1] = newMovie;
+
+        return newMovieArray;
+    }
+
+
     // Constructor
 
 

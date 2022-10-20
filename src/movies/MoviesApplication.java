@@ -17,7 +17,7 @@ public class MoviesApplication {
             System.out.println("5 - view movies in the scifi category");
             System.out.println("6 - add a movie to the list");
 
-            userChoice = input.getString("Enter your choice:");
+            userChoice = input.getString(" Enter your choice: ");
 
             switch (userChoice){
                 case "0":
@@ -50,11 +50,13 @@ public class MoviesApplication {
 
                     break;
                 case "6":
-                    Movie.getAllMovieFromCategory("drama", movies);
-
+                    String title = input.getString("Enter the name of the movie: ");
+                    String category = input.getString("Enter the category of the movie: ");
+                    Movie newMovie = new Movie(title, category);
+                    movies = Movie.addMovie(newMovie, movies);
                     break;
                 default:
-                    System.out.println("BE MORE SMARTER! FOLLOW DIRECTONS");
+                    System.out.println("BE MORE SMARTER! FOLLOW DIRECTIONS");
             }
 
         }
@@ -65,3 +67,9 @@ public class MoviesApplication {
 
     } // end of main
 } // end of movieapp
+
+
+// bonus
+// Add functionality to allow a user to add a new movie to the list.
+
+
