@@ -16,14 +16,13 @@ public class ShapesTest {
         System.out.println("The Area of box 1 is " + box1.getArea());
         System.out.println("The Perimeter of box 1 is " + box1.getPerimeter());
 
-        Rectangle box2 = new Square(5);
+        Square box2 = new Square(5);
         System.out.println("The Area of box 2 is " + box2.getArea());
         System.out.println("The Perimeter of box 2 is " + box2.getPerimeter());
 
         // Override method
-        System.out.println(rectangle.getArea());
-        System.out.println(rectangle.getPerimeter());
-
+        System.out.println(box2.getArea());
+        System.out.println(box2.getPerimeter());
 
     } // main
 } // rectangle

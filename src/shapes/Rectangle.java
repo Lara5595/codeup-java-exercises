@@ -2,9 +2,9 @@ package shapes;
 
 public class Rectangle {
 
-    private int length;
+    protected int length;
 
-    private int width;
+    protected int width;
 
     // Getter
     public int getLength() {

@@ -10,7 +10,7 @@ public class Square extends Rectangle {
     }
 
     // Setter
-    public  void setSide() {
+    public  void setSide( int side) {
         this.side = side;
     }
 
@@ -18,12 +18,14 @@ public class Square extends Rectangle {
     // Methods Override Polymorphism
     public int getPerimeter(){
         System.out.println("Square override getPerimeter method ");
-        return  4 * side;
+//            return 4 * length;
+                return  4 * side;
     }
 
     public int getArea(){
         System.out.println("Square override getArea method");
-        return (int) Math.pow(2,side);
+//            return (int) Math.pow(length,2);
+                return (int) Math.pow(2,side);
     }
 
     // end of methods override
@@ -40,9 +42,13 @@ public class Square extends Rectangle {
 
     // We create a constructor Square with a arg side
     // We get the set length and width with super and pass it side
-    public Square(int side){
-        super.setLength(side);
-        super.setWidth(side);
+//    public Square(int side){
+//        super.setLength(side);
+//        super.setWidth(side);
+//    }
+
+    public Square (int side){ // so if you want to override you need to create a new constructor
+        this.setSide(side);
     }
 
 } // Rectangle
