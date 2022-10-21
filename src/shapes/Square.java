@@ -4,8 +4,8 @@ public class Square extends Rectangle {
 
     private int side;
 
-    // Getter
-    public  int getSide( int side) {
+    //  Getter
+    public int getSide() {
         return side;
     }
 
@@ -25,7 +25,7 @@ public class Square extends Rectangle {
     public int getArea(){
         System.out.println("Square override getArea method");
 //            return (int) Math.pow(length,2);
-                return (int) Math.pow(2,side);
+                return (int) Math.pow(getSide(),2);
     }
 
     // end of methods override
