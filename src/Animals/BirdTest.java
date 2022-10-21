@@ -9,10 +9,10 @@ public class BirdTest {
 //    }
 
     public static void main(String[] args) {
-        Bird crow = new Bird();
-        crow.setName("Dr, crow");
-        System.out.print(crow.getName() + " goes ");
-        crow.makeNoise();
+//        Bird crow = new Bird();
+//        crow.setName("Dr, crow");
+//        System.out.print(crow.getName() + " goes ");
+//        crow.makeNoise();
 
         TweetyBird goldfinch = new TweetyBird();
         goldfinch.setName("Dr. goldfinch");
@@ -53,8 +53,9 @@ public class BirdTest {
 
         Parrot parrott2 = new Parrot(); // This makes it to say a bird was constructed and a parrot was constructed
 
-
         System.out.println(parrott2.order);
+
+        parrot.beCute(); // this is a abstract and implement
 
 //        System.out.println(argumentativeOrnithologist("Pssittacifomres", "Sphenicsciformes")); // This wont work because we have a final
 

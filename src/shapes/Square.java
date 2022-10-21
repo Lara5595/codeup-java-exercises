@@ -42,13 +42,15 @@ public class Square extends Rectangle {
 
     // We create a constructor Square with a arg side
     // We get the set length and width with super and pass it side
-//    public Square(int side){
-//        super.setLength(side);
-//        super.setWidth(side);
-//    }
+    //    public Square(int side){
+    //        super.setLength(side);
+    //        super.setWidth(side);
+    //    }
 
     public Square (int side){ // so if you want to override you need to create a new constructor
         this.setSide(side);
     }
+
+
 
 } // Rectangle

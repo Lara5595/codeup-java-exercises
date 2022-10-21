@@ -1,6 +1,6 @@
 package Animals;
 
-public class Bird {
+abstract public class Bird { // When we do abstract we cannot create more birds with the class Bird
 
 //    private String name;
     protected String name;  // I change it from Private to protected, so we can use it on parrot class
