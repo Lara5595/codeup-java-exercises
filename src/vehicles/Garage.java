@@ -14,7 +14,7 @@ public class Garage {
     }
 
     // Methods
-    public void alarmCascade(Vehicles[] vehicles){
+    public void alarmCascade(){
         for (Vehicles vehicle : vehicles){
             vehicle.alarm();
         }

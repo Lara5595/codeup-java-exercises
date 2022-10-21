@@ -16,15 +16,15 @@ public class Square extends Rectangle {
 
 
     // Methods Override Polymorphism
-//    public int getPerimeter(){
-//        System.out.println("Square override getPerimeter method ");
-//        return 4 * side;
-//    }
-//
-//    public int getArea(){
-//        System.out.println("Square override getArea method");
-//        return (int) Math.pow(2,side);
-//    }
+    public int getPerimeter(){
+        System.out.println("Square override getPerimeter method ");
+        return  4 * side;
+    }
+
+    public int getArea(){
+        System.out.println("Square override getArea method");
+        return (int) Math.pow(2,side);
+    }
 
     // end of methods override
 

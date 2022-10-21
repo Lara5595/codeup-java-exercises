@@ -2,7 +2,8 @@ package Animals;
 
 public class Bird {
 
-    private String name;
+//    private String name;
+    protected String name;  // I change it from Private to protected, so we can use it on parrot class
 
     //  Getter
     public String getName() {
@@ -31,9 +32,14 @@ public class Bird {
 
     // Constructor
 
+//    public Bird(){
+//        System.out.println("A bird was constructed");
+//    }
+
     public Bird() {
         this.name = name;
     }
+
 
 
 

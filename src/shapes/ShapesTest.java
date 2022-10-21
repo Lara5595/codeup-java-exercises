@@ -21,8 +21,8 @@ public class ShapesTest {
         System.out.println("The Perimeter of box 2 is " + box2.getPerimeter());
 
         // Override method
-//        System.out.println(Square.getArea());
-//        System.out.println(Square.getPerimeter());
+        System.out.println(rectangle.getArea());
+        System.out.println(rectangle.getPerimeter());
 
 
     } // main
