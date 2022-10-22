@@ -27,15 +27,17 @@ public class ShapesTest {
 //        System.out.println(box2.getArea());
 //        System.out.println(box2.getPerimeter());
 
-        Quadrilateral square = new Square(5,5);
-        System.out.println(square.getArea());
-        System.out.println(square.getPerimeter());
+        Measurable myShape = new Square(5,5);
+        System.out.println(myShape.getArea());
+        System.out.println(myShape.getPerimeter());
 
-        Quadrilateral newRec = new Rectangle(3, 4);
-        System.out.println(newRec.getArea());
-        System.out.println(newRec.getPerimeter());
+        Measurable myShape2 = new Rectangle(3, 4);
+        System.out.println(myShape2.getArea());
+        System.out.println(myShape2.getPerimeter());
 
 
 
     } // main
 } // rectangle
+
+// Added more notes
