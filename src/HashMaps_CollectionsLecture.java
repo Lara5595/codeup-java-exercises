@@ -51,10 +51,15 @@ public class HashMaps_CollectionsLecture {
         // use .entrySet to derive a set of entries
         // Each Entry is represented as a Map.Entry<DataTypeOfKey, DataTypeOfValue>
         // Once you have an entrySet you can use an enhanced for loop to loop over it.
+        System.out.println("Loop over entrySet Technique 1");
         for (Map.Entry<String, Monster> monsterEntry : monsterHashMap.entrySet()){
             Monster monster = monsterEntry.getValue();  // we created this variable, so we can you just monster instead of monster.getValue() everytime
             System.out.printf("The %s has %d hit points, an armor class of %d%n", monster, monster.getHitPoints(), monster.getArmorClass());
         }
+
+
+        // Technique 2: get the keyset, convert it to a list, and loop
+        // over the list, using the keys to access the HashMap entries
 
         // To create a list of specific properties in the objects
         // stored as HashMap values, we can use .keySet().stream().toList()
@@ -63,6 +68,42 @@ public class HashMaps_CollectionsLecture {
         // Once I've got a list, I can sort it and do other List things to it
         Collections.sort(monsterNames);
         System.out.println(monsterNames);
+
+        // The strings generated form the keyset are the keys to the HashMap
+        // So looping over this list allows me to access all the HashMap entries
+        System.out.println("Loop over key set converted Technique 2");
+        for (String monsterName : monsterNames){
+            Monster monster = monsterHashMap.get(monsterName);
+            System.out.printf("The %s has %d hit points, an armor class of %d%n", monster, monster.getHitPoints(), monster.getArmorClass());
+        }
+
+        // Technique 3: the forEach loop
+//        System.out.println("For each loop Technique 3");
+//        monsterHashMap.forEach((key, monster) -> {
+//            System.out.printf("The %s has %d hit points, an armor class of %d%n", monster, monster.getHitPoints(), monster.getArmorClass());
+//
+//        });
+
+
+        // Converting a HashMap into a TreeMap
+        // Convert to a TreeMap to sort by key
+
+        System.out.println("Output of forEach over the TreeMap");
+        Map<String, Monster> monsterTreeMap = new TreeMap<>(monsterHashMap);
+        monsterTreeMap.forEach((key, monster) -> {
+            System.out.printf("The %s has %d hit points, an armor class of %d, and does %d damage.%n", monster, monster.getHitPoints(), monster.getArmorClass(), monster.getDamage());
+        });
+
+
+        // Use the Collection toArray() method to convert a collection of
+        // HashMap value into an array of objects
+        // Each value in a HashMap is an object
+        // Using .values().toArray() we can create an array of objects
+
+        Monster[] monstersArray2 = monsterHashMap.values().toArray(new Monster[0]);
+        for (Monster monster : monstersArray2){
+            System.out.println(monster.getName() + " has " + monster.getHitPoints() + " hit points ");
+        }
 
 
 
