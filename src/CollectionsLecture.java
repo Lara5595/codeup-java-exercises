@@ -6,6 +6,8 @@ import java.util.List;
 public class CollectionsLecture {
     public static void main(String[] args) {
 
+        // ArrayList
+
         ArrayList<Monster> monsterArrayList = new ArrayList<>();   //This creates a empty array list
         Monster orc = new Monster(12, 15, 9, "Orc"); // This creates the monsters by using the monsters constructor
         Monster ogre = new Monster(11, 59, 13, "Ogre");
@@ -25,16 +27,38 @@ public class CollectionsLecture {
         System.out.println(monsterArrayList.get(1).getName());
         System.out.println(monsterArrayList); // This prints out the whole array  we can print it like this because we have a method on  monsters
 
-        // How to add multiple objects to an arrayList all at once
+        // How to add multiple objects to a new array list
         List<Monster> newMonsterList = new ArrayList<>(List.of(goblin, blueDragon,frostGiant, werewolf));
-        System.out.println(newMonsterList); // We greated a new array but now we want to combine them
+        System.out.println(newMonsterList); // We created a new array, but now we want to combine them
 
         // This adds all the monster from the new to the old array
-        monsterArrayList.addAll(newMonsterList);
-        newMonsterList = monsterArrayList; // You don't have to do this but this destroys the old list or makes the new list have all the monsters also
-        System.out.println(monsterArrayList);
-        System.out.println(newMonsterList.size()); // It updated the list to 6
+//        monsterArrayList.addAll(newMonsterList);
+//        newMonsterList = monsterArrayList; // You don't have to do this but this destroys the old list and makes the new list have all the monsters also
+//        System.out.println(monsterArrayList);
+//        System.out.println(newMonsterList.size()); // It updated the list to 6
 
+        // OR you can do this to add monsters without creating the newArrayList and add them to the existing array list
+        monsterArrayList.addAll(new ArrayList<>(List.of(goblin, blueDragon, frostGiant, werewolf))); // This is another way we can add monsters to the array
+
+
+        // Loop over arrayLists
+        // traditonal for loop
+        // Gives you access to the index
+        for (int i = 0; i < monsterArrayList.size(); i++) {      // you wont use length you will use .size now for for loop of an array
+            if (i == monsterArrayList.size() - 1) {
+                System.out.printf("%s%n", monsterArrayList.get(i));
+            } else {
+                System.out.printf("%s,  ", monsterArrayList.get(i));
+            }
+        }
+
+
+        // Enhanced for loop
+        // Simpler syntax but no access to the index.
+
+        for ( Monster monster : monsterArrayList ){
+            System.out.println(monster.getHitPoints());
+        }
 
     } // end of main
 } // end of collection
