@@ -60,6 +60,7 @@ public class Monster implements Comparator<Monster> {  // we added the implement
             return Integer.compare(m2.getHitPoints(), m1.getHitPoints());
         }
 
+
         // Constructors
         public Monster(){}
 
