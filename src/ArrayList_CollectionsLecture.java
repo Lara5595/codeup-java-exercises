@@ -1,11 +1,13 @@
 import rpg.Monster;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
-public class CollectionsLecture {
+public class ArrayList_CollectionsLecture {
     public static void main(String[] args) {
-
+        // DATA STRUCTURES
         // ArrayList
 
         ArrayList<Monster> monsterArrayList = new ArrayList<>();   //This creates a empty array list
@@ -42,23 +44,63 @@ public class CollectionsLecture {
 
 
         // Loop over arrayLists
-        // traditonal for loop
+        // traditional for loop
         // Gives you access to the index
-        for (int i = 0; i < monsterArrayList.size(); i++) {      // you wont use length you will use .size now for for loop of an array
-            if (i == monsterArrayList.size() - 1) {
-                System.out.printf("%s%n", monsterArrayList.get(i));
-            } else {
-                System.out.printf("%s,  ", monsterArrayList.get(i));
-            }
-        }
+//        for (int i = 0; i < monsterArrayList.size(); i++) {      // you wont use length you will use .size now for a for loop of an array
+//            if (i == monsterArrayList.size() - 1) {
+//                System.out.printf("%s%n", monsterArrayList.get(i));
+//            } else {
+//                System.out.printf("%s,  ", monsterArrayList.get(i));
+//            }
+//        }
 
 
         // Enhanced for loop
         // Simpler syntax but no access to the index.
 
-        for ( Monster monster : monsterArrayList ){
-            System.out.println(monster.getHitPoints());
-        }
+//        for ( Monster monster : monsterArrayList ){
+//            System.out.println(monster.getHitPoints());
+//        }
+
+
+        // When creating an ArrayList of primitive data types, use the corresponding Object wrapper. ArrayLists can only contain objects
+        ArrayList<Integer> myNumbers = new ArrayList<>(List.of(1, 89, 34, -67, 98, 23));
+        System.out.println(myNumbers);
+        Collections.sort(myNumbers);  // collections.sort mutates the array it does not return a new one .sort, sorts the numbers from min to max
+        System.out.println(myNumbers);
+
+        ArrayList<String> randomWords = new ArrayList<>(List.of("version", "suntan", "rate", "defeat", "bond", "later"));
+        Collections.sort(randomWords);
+        System.out.println(randomWords); // sorts the array from a-z
+
+        randomWords.sort(Collections.reverseOrder()); // This reverses the order
+        System.out.println(randomWords);
+
+
+        // Sorting monstersObjects
+        // We use the Comparator class util
+
+
+        // If you want to compare custom objects rahter than numbers or strings,
+        // A simple method is to call .sort() on the list and pass it
+        // Comparator.comparing(NameOfObject::getterForWhatYouWantToCompare)
+        // so to compare monsters by hit points, I use Monster::getHitPoints
+        monsterArrayList.sort(Comparator.comparing(Monster::getHitPoints));
+        System.out.println(monsterArrayList);  // It orders it from the least hit points to greater hit points
+
+        // If i want to sort custom objects by properties in reverse order, it's
+        // a little more complex. One technique is to implement Comparator in the class
+        // and override the compare() method (see code in Monster Class)
+
+        //To use the compare() method that we wrote in the Monster calls
+        //we use the sort method and pass it a no-arg Constructor
+        monsterArrayList.sort(new Monster());
+        System.out.println(monsterArrayList);
+
+
+
+
+
 
     } // end of main
 } // end of collection

@@ -1,6 +1,8 @@
 package rpg;
 
-public class Monster {
+import java.util.Comparator;
+
+public class Monster implements Comparator<Monster> {  // we added the implements comparator<monster>
 
         // Createad private classes so we can use em then we cretede getters and setters for each one
         private int armorClass;
@@ -50,6 +52,12 @@ public class Monster {
         // Methods We created toString to use it on our array when we call it
         public String toString(){
             return name;
+        }
+
+        // To create a custom comparison method, we implement Comparable<objectClass>
+        // In the object calls. We can use this syntax:
+        public int compare(Monster m1, Monster m2){
+            return Integer.compare(m2.getHitPoints(), m1.getHitPoints());
         }
 
         // Constructors
