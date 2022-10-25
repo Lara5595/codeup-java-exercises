@@ -2,9 +2,9 @@ package rpg;
 
 import java.util.Comparator;
 
-public class Monster implements Comparator<Monster> {  // we added the implements comparator<monster>
+public class Monster implements Comparator<Monster> {  // we added the implements' comparator<monster>
 
-        // Createad private classes so we can use em then we cretede getters and setters for each one
+        // Createad private classes so we can use em then we create getters and setters for each one
         private int armorClass;
         private int hitPoints;
         private int damage;
