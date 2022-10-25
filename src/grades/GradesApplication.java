@@ -75,6 +75,10 @@ public class GradesApplication {
 
             System.out.println("Do you want to continue? y/n");
             goAgain = scanner.next();
+            if (goAgain.equals("n") || goAgain.equals("no")) {
+                System.out.println("Goodbye, and have a wonderful day!");
+                break;
+            }
             scanner.nextLine();
 
         } // end of while loop
