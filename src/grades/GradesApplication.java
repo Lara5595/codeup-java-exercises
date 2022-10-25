@@ -8,6 +8,8 @@ import static java.util.Map.entry;
 
 public class GradesApplication {
     public static void main(String[] args) {
+        // Creating Students with grades
+
         Student mason = new Student("Mason");
         mason.addGrade(95);
         mason.addGrade(90);
@@ -28,8 +30,10 @@ public class GradesApplication {
         david.addGrade(90);
         david.addGrade(79);
 
-        HashMap<String, Student> studentHashMap = new HashMap<>();
+        // Creating a Hashmap for students
+        HashMap<String, Student> studentUserNames = new HashMap<>();
 
+        // Creating github Usernames
         Map<String, Student> studentMap = Map.ofEntries(
                 entry("WoodyMas", mason),
                 entry("arrongithub",aaron),
@@ -37,23 +41,39 @@ public class GradesApplication {
                 entry("david5595", david)
         );
 
-        studentHashMap.putAll(studentMap);
+        // Puts the hashmap into studentsHashMap
+        studentUserNames.putAll(studentMap);
+
 //        System.out.println(studentHashMap);
 
 
-        System.out.println("Welcome!");
-        System.out.println("Here are the GitHub usernames of our students: ");
-
-
-        studentHashMap.forEach((key, student) -> {
-            System.out.printf(" |%s| ", key);
-        });
-
-
         Scanner scanner = new Scanner(System.in);
-        System.out.println("What student would you like to see more information on? ");
-        String userResponse = scanner.nextLine();
 
+
+        // I used the Bob function to create the while loop
+
+        String goAgain = "y";  // Created this so when the user answer yes it continues
+        while (goAgain.equalsIgnoreCase("y")) {  // while the user enter yes go again
+            System.out.println("Welcome!");
+            System.out.println("Here are the GitHub usernames of our students: ");
+
+            studentUserNames.forEach((key, student) -> {
+                System.out.printf(" |%s| ", key);
+            });
+
+            System.out.printf("%n%nWhat student would you like to see more information on? ");
+            String userAnswer = scanner.nextLine();
+
+            if (studentMap.containsKey(userAnswer)) {
+                Student selectedStudent = studentUserNames.get(userAnswer);
+                System.out.printf("%s - GitHub Username: %s %.2f%n", selectedStudent.getName(), userAnswer, selectedStudent.getGradeAverage());
+            } else {
+                System.out.println("WhatEver");
+            }
+
+            System.out.println("Do you want to continue?");
+            goAgain = scanner.next();
+            scanner.nextLine();
 
 
 
@@ -70,6 +90,7 @@ public class GradesApplication {
 
 
     } // end of main
+}
 } // end of gradesapp
 
 
