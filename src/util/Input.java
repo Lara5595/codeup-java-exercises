@@ -1,5 +1,7 @@
 package util;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class Input {
@@ -83,6 +85,8 @@ public class Input {
       System.out.println("Enter your Decimal number: ");
       return scanner.nextDouble();
    }
+
+
 
 
 
