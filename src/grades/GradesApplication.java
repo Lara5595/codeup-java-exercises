@@ -57,21 +57,21 @@ public class GradesApplication {
             System.out.println("Welcome!");
             System.out.println("Here are the GitHub usernames of our students: ");
 
-            studentUserNames.forEach((key, student) -> {
+            studentUserNames.forEach((key, student) -> { // This loops through the keys
                 System.out.printf(" |%s| ", key);
             });
 
             System.out.printf("%n%nWhat student would you like to see more information on? ");
-            String userAnswer = scanner.nextLine();
+            String userAnswer = scanner.nextLine(); // Created var userAnswer so it would prompt
 
-            if (studentMap.containsKey(userAnswer)) {
-                Student selectedStudent = studentUserNames.get(userAnswer);
-                System.out.printf("%s - GitHub Username: %s %.2f%n", selectedStudent.getName(), userAnswer, selectedStudent.getGradeAverage());
+            if (studentMap.containsKey(userAnswer)) {       // Checks if studentMap. containsKey
+                Student selectedStudent = studentUserNames.get(userAnswer); // created a var selectedStudent
+                System.out.printf("%s - GitHub Username: %s%n Current Average: %.2f%n", selectedStudent.getName(), userAnswer, selectedStudent.getGradeAverage());
             } else {
-                System.out.println("WhatEver");
+                System.out.println("Please select a valid student");
             }
 
-            System.out.println("Do you want to continue?");
+            System.out.println("Do you want to continue? y/n");
             goAgain = scanner.next();
             scanner.nextLine();
 
