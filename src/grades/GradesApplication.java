@@ -22,8 +22,8 @@ public class GradesApplication {
 
         Student nazareth = new Student("Nazareth");
         nazareth.addGrade(70);
-        nazareth.addGrade(50);
-        nazareth.addGrade(100);
+        nazareth.addGrade(69);
+        nazareth.addGrade(70);
 
         Student david = new Student("David");
         david.addGrade(91);
@@ -33,7 +33,7 @@ public class GradesApplication {
         // Creating a Hashmap for students
         HashMap<String, Student> studentUserNames = new HashMap<>();
 
-        // Creating github Usernames
+        // Creating GitHub Usernames
         Map<String, Student> studentMap = Map.ofEntries(
                 entry("WoodyMas", mason),
                 entry("arrongithub",aaron),
@@ -66,7 +66,7 @@ public class GradesApplication {
 
             if (studentMap.containsKey(userAnswer)) {       // Checks if studentMap. containsKey
                 Student selectedStudent = studentUserNames.get(userAnswer); // created a var selectedStudent
-                System.out.printf("%s - GitHub Username: %s%n Current Average: %.2f%n", selectedStudent.getName(), userAnswer, selectedStudent.getGradeAverage());
+                System.out.printf("Name: %s - GitHub Username: %s%n Current Average: %.2f%n", selectedStudent.getName(), userAnswer, selectedStudent.getGradeAverage());
             } else {
                 System.out.println("Please select a valid student");
             }
@@ -75,23 +75,10 @@ public class GradesApplication {
             goAgain = scanner.next();
             scanner.nextLine();
 
+        } // end of while loop
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-    } // end of main
-}
-} // end of gradesapp
+} // end of main
+} // end of Grades application
 
 
 
