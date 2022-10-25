@@ -36,8 +36,20 @@ public class Input {
 
 
    // Returns True or false
-   public boolean yesNo() {
-      System.out.println("Enter yes/no : ");
+//   public boolean yesNo() {
+//      System.out.println("Enter yes/no : ");
+//      String userInput = scanner.nextLine().toLowerCase();
+//
+//      if (userInput.equals("y") || userInput.equals("yes")) {
+//         return true;
+//      } else {
+//         return false;
+//      }
+//   }
+
+   // We changed the YesNo to prompt
+   public boolean yesNo(String prompt) {
+      System.out.println(prompt);
       String userInput = scanner.nextLine().toLowerCase();
 
       if (userInput.equals("y") || userInput.equals("yes")) {
@@ -46,6 +58,7 @@ public class Input {
          return false;
       }
    }
+
 
    // Prompts user till they get a number in between min and max
    public int getInt(int min, int max){
