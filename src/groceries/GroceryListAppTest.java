@@ -35,7 +35,7 @@ public class GroceryListAppTest {
                 System.out.printf("%s, ", categories.get(i));
             }
         } // end loop over categories list
-        // If you put yes then it going to enter a category
+        // If you put yes then it keeps going to enter a category
         String category = input.getString("Enter a category:");
         String name = input.getString("Enter the name of the item:");
         String quantity = input.getString("Enter the quantity: ");
@@ -56,8 +56,10 @@ public class GroceryListAppTest {
 
     } // End enterItem method
 
+
+
     // We created a method, so it can generate the grocery list
-    public static void generateGroceryList(Input input, ArrayList<String> categories,        HashMap<String, ArrayList<GroceryListApp>> groceryList){
+    public static void generateGroceryList(Input input, ArrayList<String> categories, HashMap<String, ArrayList<GroceryListApp>> groceryList){
 
 
         // If user inputs yes to create a list then it prompts
@@ -85,7 +87,8 @@ public class GroceryListAppTest {
     public static void main(String[] args) {
         Input input = new Input(); // We link the input class
 
-        boolean userChoice = input.yesNo("Would you like to create a grocery list (yes/no)"); // We are using the yesNo method from the input class we refactor it a little
+        // We are using the yesNo method from the input class  and this is the first step where it prompts you
+        boolean userChoice = input.yesNo("Would you like to create a grocery list (yes/no)");
         ArrayList<String> categories = generateCategories(); // This calls the array list
 
         //Created a new hashmap
