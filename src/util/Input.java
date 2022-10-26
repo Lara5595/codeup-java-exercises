@@ -20,7 +20,7 @@ public class Input {
    }
 
 
-   // Methods\
+   /////////////////////////////////////////////////////////////// Methods\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
    // Returns your string
    public String getString() {
@@ -75,10 +75,43 @@ public class Input {
    }
 
    // Returns a integer
-   public int getInt() {
-      System.out.println("Enter your Number: ");
-      return scanner.nextInt();
+    /*
+        TODO: refactor this method to use Integer.valueOf(getString()) and surround it with a try-catch block to
+         to catch the NumberFormatException. If the exception is caught, call the getInt() method again.
+     */
+
+
+//   public int getInt(){
+//      try {
+//         Integer.valueOf(getString());
+//      } catch (NumberFormatException e){
+//         e.printStackTrace();
+//         System.out.println("Please enter a Int");
+//         getInt();
+//      }
+//      return 0;
+//
+//   }
+
+   // This is without e.printStackTrace()
+   public int getInt(){
+      // get user input as a string
+      // parse the string into a number
+      // if the parse throws an exception, recurse
+      // if no exception return the parsed number
+      String userInput = getString();
+      try {
+        return Integer.valueOf(userInput);
+      } catch (NumberFormatException e) {
+         System.out.println("Invalid input type. Enter a number!");
+         return getInt();
+      }
    }
+
+//   public int getInt() {
+//      System.out.println("Enter your Number: ");
+//      return scanner.nextInt();
+//   }
 
 
    public double getDouble(double min, double max) {
@@ -94,32 +127,52 @@ public class Input {
       }
    }
 
-      public double getDouble() {
-      System.out.println("Enter your Decimal number: ");
+   public double getDouble(String prompt){
+      System.out.println(prompt);
       return scanner.nextDouble();
    }
 
 
+     /*
+        TODO: refactor this method to use Double.valueOf(getString()) and surround it with a try-catch block to
+         to catch the NumberFormatException. If the exception is caught, call the getDouble() method again.
+     */
+
+   public double getDouble(){
+      String userInput = getString();
+      try {
+        return Double.valueOf(userInput);
+      } catch (NumberFormatException e){
+         System.out.println("Please enter a double");
+        return  getDouble();
+      }
+   }
+
+
+//      public double getDouble() {
+//      System.out.println("Enter your Decimal number: ");
+//      return scanner.nextDouble();
+//   }
+
+   /////////////////////////////////////////////////////////////// End of Methods\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
 
 
 
 
-   // Constructor
+
+   /////////////////////////////////////////////////////////////// Constructors \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
    public Input(){
       scanner = new Scanner(System.in);
    }
+
+
+   /////////////////////////////////////////////////////////////// End of Constructors \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
 
 } // End of input
 
 
 
-// 1. Create an input validation class
-//Create a package inside of src named util. Inside util, create a class named Input that has a private field named scanner. When an instance of this object is created, the scanner field should be set to a new instance of the Scanner class. The class should have the following methods, all of which return command line input from the user:
-//    String getString()
-//    boolean yesNo()
-//    int getInt(int min, int max)
-//    int getInt()
-//    double getDouble(double min, double max)
-//    double getDouble()
+

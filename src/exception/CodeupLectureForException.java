@@ -1,5 +1,7 @@
 package exception;
 
+import util.Input;
+
 import java.util.Scanner;
 
 public class CodeupLectureForException {

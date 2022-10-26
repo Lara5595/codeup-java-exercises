@@ -1,7 +1,10 @@
 package exception;
 
+import util.Input;
+
 import java.awt.print.PrinterException;
 import java.sql.SQLException;
+import java.sql.SQLOutput;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -70,10 +73,16 @@ public class ExceptionsLecture {
         }
 //        soutName("Bob");
 
-
+        Input input = new Input();
+        System.out.println("Enter a number!");
+//        input.getInt();
+        input.getDouble();
 
 
     } // End of main
+
+
+
 
     private static final Scanner sc = new Scanner(System.in);
 
@@ -133,4 +142,4 @@ public class ExceptionsLecture {
         }
     }
 
-}
+} // End of exceptionsLecture
