@@ -10,9 +10,7 @@ public class Practice {
 
     //        3. Create a public static method *average* in the Practice class that takes an array of integers and returns their average as a double.
 
-    // Listen up Timmy!
     // Whenever a variable/argument/parameter is declared (which means that it's established as a variable), in Java, unlike JS you must __establish a data-type!!:)__
-    // What is an average, Timmy?
     // Total / length 8, 9, 10, 2, 5 /5 => avg
 
     public static double average(int[] array){
@@ -20,7 +18,6 @@ public class Practice {
         for (int i = 0; i < array.length; i++){
             total += array[i];
         }
-        // Timmy, why is this wrong?
         return (double) total/array.length;
     }
 
@@ -28,6 +25,7 @@ public class Practice {
 
     public static void main(String[] args) {
     int[] testArr = {8, 9, 10, 2, 5}; // array for #3
+
         System.out.println(subtractTen(20));
         System.out.println(average(testArr));
 
