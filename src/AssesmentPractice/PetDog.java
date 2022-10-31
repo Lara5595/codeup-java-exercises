@@ -2,7 +2,9 @@ package AssesmentPractice;
 
 //        6. Create a PetDog class that inherits from Pet.
 
-    public class PetDog extends Pet implements Companion  {
+import java.util.ArrayList;
+
+public class PetDog extends Pet implements Companion  {
 
     //        7. In PetDog, create a boolean instance variable, trained.
 
@@ -23,6 +25,15 @@ public void setTrained(boolean trained){
         public String snuggle() {
             return getName() + " wants to snuggle";
         }
+
+        //        12b. In your PetDog class, create a static method named allSnuggle. It should accept an ArrayList of PetDog objects and output the result of calling the snuggle method on all of them. Create an ArrayList with at least three PetDog instances in the PetDogTest class. Call the allSnuggle method and pass it the ArrayList. Verify that the allSnuggle method works correctly.
+        public static void allSnuggle(ArrayList<PetDog> petDogs){
+            for (PetDog petDog : petDogs){
+                System.out.println(petDog.snuggle());
+            }
+
+        }
+
 
     // Constructor
 

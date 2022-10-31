@@ -1,6 +1,9 @@
 package AssesmentPractice;
 //1. Create a class called Practice with a main method.
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Practice {
 
     //        2. Create a public static method in the Practice class called *subtractTen* that takes one integer argument and returns that number minus 10.
@@ -22,10 +25,14 @@ public class Practice {
     }
 
     //        12. In your Practice class, create a static method named multiplyAll. It should accept an integer and an ArrayList of integers. It should take the ArrayList argument and multiply all its elements by the value of the integer argument.
-//        12b. In your PetDog class, create a static method named allSnuggle. It should accept an ArrayList of PetDog objects and output the result of calling the snuggle method on all of them. Create an ArrayList with at least three PetDog instances in the PetDogTest class. Call the allSnuggle method and pass it the ArrayList. Verify that the allSnuggle method works correctly.
 
-    public static void multiplyAll(){
 
+    public static ArrayList<Integer> multiplyAll(int multiplier, ArrayList<Integer> numbers){
+        ArrayList<Integer> newNumbersArrayList = new ArrayList<>();
+        for (int number : numbers){
+            newNumbersArrayList.add(number * multiplier);
+        }
+            return newNumbersArrayList;
     }
 
 
@@ -36,6 +43,12 @@ public class Practice {
         System.out.println(subtractTen(20));
         System.out.println(average(testArr));
         System.out.println(average(numbers));
+
+        //#12
+        for (int number : multiplyAll(5, new ArrayList<>(List.of(5, 10, 15, 25, 30)))){
+            System.out.println(numbers);
+        }
+
 
     } // Main
 } // Practice
