@@ -113,8 +113,8 @@ public class FileIOLecture {
 //        Path p = Paths.get("src", "test.txt");
 
 
-        // This adds names to the test.txt
-        // If we remove StandardOpenOption.APPEND it replaces the names instead of adding
+//         This adds names to the test.txt
+//         If we remove StandardOpenOption.APPEND it replaces the names instead of adding
 
 //        List<String> newNames = Arrays.asList("David", "Fernando", "Mason");
 //        try {
@@ -122,11 +122,11 @@ public class FileIOLecture {
 //        } catch (IOException e) {
 //            e.printStackTrace();
 //        }
-
-
-
-        // This is another way to add people
-
+//
+//
+//
+//        // This is another way to add people
+//
 //        List<String> names = new ArrayList<>();
 //        names.add("Tim");
 //        names.add("Sally");

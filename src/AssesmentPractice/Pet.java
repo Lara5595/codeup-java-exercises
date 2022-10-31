@@ -3,8 +3,8 @@ package AssesmentPractice;
 
  public class Pet {
 
-    public String name;
-    public String type;
+    private String name;
+    private String type;
 
 
     //        5. Create getters and setters for the properties as well as a constructor that takes two strings and sets the name and type.
