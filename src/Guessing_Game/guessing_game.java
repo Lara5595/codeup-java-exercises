@@ -11,6 +11,7 @@ public class guessing_game extends guess_methods{
 
         int userAnswer = 0;
 
+//        This lets you know on the console which is the correct number
         System.out.println("The correct guess would be " + computerNumber);
 
         int count = 1;
@@ -23,10 +24,10 @@ public class guessing_game extends guess_methods{
             JOptionPane.showMessageDialog(null, "" + determineGuess(userAnswer, computerNumber, count));
 
             count++;
-            
+
         } // End of while loop
     } // End of main
 
 
 
-}
+} // end of guessing game
