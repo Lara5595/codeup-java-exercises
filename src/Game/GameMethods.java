@@ -2,15 +2,7 @@ package Game;
 
 public class GameMethods {
 
-/////////////////////////////////////////// Constructors //////////////////////////////////////////
 
-    // Default Constructor
-    GameMethods(){}
-
-
-    GameMethods(boolean loopLogic){
-        this.loopLogic = loopLogic;
-    }
 
 ///////////////////////////////////// Properties (Instance Variables) ////////////////////////////////
 
@@ -43,6 +35,18 @@ public class GameMethods {
         }
 //        System.out.println(randomChance);
     } // End runAwayChance
+
+
+    /////////////////////////////////////////// Constructors //////////////////////////////////////////
+
+    // Default Constructor
+    GameMethods(){}
+
+
+    GameMethods(boolean loopLogic){
+        this.loopLogic = loopLogic;
+    }
+
 
 
 } // End GameMethods Class
